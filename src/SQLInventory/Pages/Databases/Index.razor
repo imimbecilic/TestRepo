@@ -103,7 +103,7 @@
         _loading = true;
         StateHasChanged();
         _all = await DatabaseService.GetAllAsync(_instanceFilter == 0 ? null : _instanceFilter);
-        ApplyFilter();
+        await ApplyFilter();
         _loading = false;
     }
 
